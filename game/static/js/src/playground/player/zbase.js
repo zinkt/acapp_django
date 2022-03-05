@@ -104,7 +104,7 @@ class Player extends AcGameObject{
 
     update(){
         this.chill_time += this.timedelta / 1000;
-        if(this.chill_time > 3 && Math.random() < 1/300.0){
+        if(!this.is_me && this.chill_time > 3 && Math.random() < 1/300.0){
             let player = this.playground.players[0];
             this.shoot_fireball(player.x, player.y);
         }
