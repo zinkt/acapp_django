@@ -21,6 +21,7 @@ class AcGameMenu{
         </div>
         
         `);
+        this.hide();
         this.root.$ac_game.append(this.$menu);
         this.$single = this.$menu.find('.ac-game-menu-field-item-single');
         this.$multi = this.$menu.find('.ac-game-menu-field-item-multi');
@@ -38,11 +39,11 @@ class AcGameMenu{
             outer.root.playground.show();            
         });
         this.$multi.click(function(){
-            console.log('click multi');
         });
         this.$settings.click(function(){
-            console.log('click settings');
+            outer.root.settings.logout_on_remote();
         });
+
     }
     show(){     //显示menu界面
         this.$menu.show()
